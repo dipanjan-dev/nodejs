@@ -1,3 +1,2 @@
-const data = require('./main')
-
-console.log(data.name)
+const fileSyste = require("fs");
+fileSyste.writeFileSync("read.txt","Hello My Name Is Dipanjan");
