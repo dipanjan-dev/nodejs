@@ -5,16 +5,16 @@ const hostname = "localhost";
 
 const server =  http.createServer((req,res)=>{
     res.setHeader('Content-Type','text/html');
-    const fileRoute = "./views/"
+    let fileRoute = "./views/"
     switch (req.url) {
         case '/':
-            fileRoute + "index.html"
+            fileRoute+"index.html";
             break;
         case '/register':
-            fileRoute + "register.html"
+            fileRoute+"register.html";
             break;
         default:
-            fileRoute + "error.html"
+            fileRoute+"error.html";
             break;
     }
     fs.readFile(fileRoute,(err,data)=>{
